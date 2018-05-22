@@ -10,7 +10,6 @@ import org.sonar.plugins.java.api.semantic.Symbol.TypeSymbol;
 import org.sonar.plugins.java.api.tree.ClassTree;
 import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
-import org.sonar.stage.plugin.main.Utils;
 
 @Rule(key = "DataClass", name = "Data Class", description = "In order to train the machine learning algorithm the following definition has been used to formalize the concept: The Data Class Code Smell refers to classes that store data without using complex functionality, and having other classes that strongly rely on them. A Data Class reveals many attributes, it is not complex, and it provides data field through accessor methods.", tags = {
 		"codesmells" })

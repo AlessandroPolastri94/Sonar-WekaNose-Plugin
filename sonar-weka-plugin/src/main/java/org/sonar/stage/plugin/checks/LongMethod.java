@@ -11,7 +11,6 @@ import org.sonar.plugins.java.api.tree.MethodTree;
 import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.VariableTree;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
-import org.sonar.stage.plugin.main.Utils;
 
 @Rule(key = "LongMethod", name = "Long Method", description = "In order to train the machine learning algorithm the following definition has been used to formalize the concept: The Long Method Code Smell refers to methods that tend to centralize the functionality of a class. A Long Method tends to have too much code, to be complex, to be difficult to understand and to use large amount of data from other classes.", tags = {
 		"codesmells" })

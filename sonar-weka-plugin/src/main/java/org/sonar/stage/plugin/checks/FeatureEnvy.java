@@ -11,7 +11,6 @@ import org.sonar.plugins.java.api.tree.MethodTree;
 import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.VariableTree;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
-import org.sonar.stage.plugin.main.Utils;
 
 @Rule(key = "FeatureEnvy", name = "Feature Envy", description = "In order to train the machine learning algorithm the following definition has been used to formalize the concept:  The Feature Envy Code Smell refers to methods that use more much more data from other classes than from their own class. A Feature Envy tends to use many attributes of other classes (considering also attributes accessed through accessor methods), to use more attributes from other classes than from its own class, and to use many attributes from few different classes.", tags = {
 		"codesmells" })

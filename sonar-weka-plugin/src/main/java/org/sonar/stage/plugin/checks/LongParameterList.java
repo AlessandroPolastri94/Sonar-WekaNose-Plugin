@@ -10,7 +10,6 @@ import org.sonar.plugins.java.api.semantic.Symbol.MethodSymbol;
 import org.sonar.plugins.java.api.tree.MethodTree;
 import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
-import org.sonar.stage.plugin.main.Utils;
 import org.sonar.plugins.java.api.tree.VariableTree;
 
 @Rule(key = "LongParameterList", name = "Long Parameter List", description = "In order to train the machine learning algorithm the following definition has been used to formalize the concept: The Long Parameters List Code Smell refers to method that are hard to read, interpret and call because of the long or complex list of parameters required.", tags = {

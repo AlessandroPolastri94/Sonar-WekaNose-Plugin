@@ -1,4 +1,4 @@
-package org.sonar.stage.plugin.custom.checks;
+package org.sonar.stage.plugin.checks;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,7 +13,6 @@ import org.sonar.plugins.java.api.tree.MethodTree;
 import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.VariableTree;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
-import org.sonar.stage.plugin.main.Utils;
 
 @Rule(key = "CustomRule2", name = "Custom Rule 2", description = "Your Custom Rule.", tags = { "codesmells" })
 

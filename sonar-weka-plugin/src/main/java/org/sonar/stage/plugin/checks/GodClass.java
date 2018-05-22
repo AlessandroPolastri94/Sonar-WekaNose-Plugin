@@ -10,7 +10,6 @@ import org.sonar.plugins.java.api.semantic.Symbol.TypeSymbol;
 import org.sonar.plugins.java.api.tree.ClassTree;
 import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
-import org.sonar.stage.plugin.main.Utils;
 
 @Rule(key = "GodClass", name = "God Class", description = "In order to train the machine learning algorithm the following definition has been used to formalize the concept: The God Class Code Smell refers to classes that tend to centralize the intelligence of the system. A God Class tends to be complex, to have too much code, to use large amount of data from other classes and to implement several different functionalities.", tags = {
 		"codesmells" })

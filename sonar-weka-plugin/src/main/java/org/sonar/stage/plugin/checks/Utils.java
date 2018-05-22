@@ -1,4 +1,4 @@
-package org.sonar.stage.plugin.main;
+package org.sonar.stage.plugin.checks;
 
 import java.io.File;
 import java.io.IOException;
@@ -10,6 +10,7 @@ import java.util.Collections;
 import java.util.List;
 import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
+import org.sonar.stage.plugin.main.WorkSpaceHandler;
 
 import com.google.common.collect.ImmutableList;
 

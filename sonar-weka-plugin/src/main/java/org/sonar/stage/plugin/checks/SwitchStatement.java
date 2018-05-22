@@ -11,7 +11,6 @@ import org.sonar.plugins.java.api.tree.MethodTree;
 import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.VariableTree;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
-import org.sonar.stage.plugin.main.Utils;
 
 @Rule(key = "SwitchStatement", name = "Switch Statement", description = "In order to train the machine learning algorithm the following definition has been used to formalize the concept: The Switch Statements Code Smell refers to method that contain a complex switch operator or a sequence of if statements that compromise the readability or/and the clarity of the code.", tags = {
 		"codesmells" })
