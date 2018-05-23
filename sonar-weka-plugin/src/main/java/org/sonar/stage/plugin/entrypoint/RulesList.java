@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableList;
 import java.util.List;
 import org.sonar.plugins.java.api.JavaCheck;
 import org.sonar.stage.plugin.checks.CustomRule1;
-import org.sonar.stage.plugin.checks.CustomRule10;
 import org.sonar.stage.plugin.checks.CustomRule2;
 import org.sonar.stage.plugin.checks.CustomRule3;
 import org.sonar.stage.plugin.checks.CustomRule4;
@@ -38,6 +37,6 @@ public final class RulesList {
 				.add(LongMethod.class).add(SwitchStatement.class).add(DataClass.class).add(GodClass.class)
 				.add(CustomRule1.class).add(CustomRule2.class).add(CustomRule3.class).add(CustomRule4.class)
 				.add(CustomRule5.class).add(CustomRule6.class).add(CustomRule7.class).add(CustomRule8.class)
-				.add(CustomRule9.class).add(CustomRule10.class).build();
+				.add(CustomRule9.class).build();
 	}
 }
