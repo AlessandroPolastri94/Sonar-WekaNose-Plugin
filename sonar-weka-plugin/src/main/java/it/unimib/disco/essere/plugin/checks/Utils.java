@@ -1,4 +1,4 @@
-package it.unimib.disco.essere.WekaNosePlugin.check;
+package it.unimib.disco.essere.plugin.checks;
 
 import java.io.File;
 import java.io.IOException;
