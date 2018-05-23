@@ -1,4 +1,4 @@
-package it.unimib.disco.essere.plugin.checks;
+package it.unimib.disco.essere.WekaNosePlugin.checks;
 
 import java.io.IOException;
 import java.util.ArrayList;
