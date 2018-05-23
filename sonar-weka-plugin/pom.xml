@@ -4,14 +4,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.sonar.stage</groupId>
-	<artifactId>sonar-weka-plugin</artifactId>
+	<groupId>it.unimib.disco.essere</groupId>
+	<artifactId>Sonar-WekaNose-Plugin</artifactId>
 	<version>1.0</version>
 	<packaging>sonar-plugin</packaging>
 
-	<name>Stage Alessandro Polastri 780778</name>
+	<name>WekaNose-Plugin</name>
 	<description>This plug-in aim is to find Code Smells through machine learning detection.</description>
 	<inceptionYear>2018</inceptionYear>
+
 
 	<properties>
 		<sslr.version>1.21</sslr.version>
@@ -62,7 +63,7 @@
 			<version>${sslr.version}</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.jdom</groupId>
 			<artifactId>jdom2</artifactId>
@@ -90,7 +91,7 @@
 				<configuration>
 					<pluginKey>java-custom</pluginKey>
 					<pluginName>Java Custom Rules</pluginName>
-					<pluginClass>org.sonar.stage.plugin.entrypoint.Main</pluginClass>
+					<pluginClass>it.unimib.disco.essere.WekaNosePlugin.entrypoint.Main</pluginClass>
 					<sonarLintSupported>true</sonarLintSupported>
 					<sonarQubeMinVersion>6.7</sonarQubeMinVersion>
 				</configuration>
@@ -107,4 +108,30 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<developers>
+		<developer>
+			<id>apolastri</id>
+			<name>Alessandro Polastri</name>
+			<email>alessandro.polastri94@gmail.com</email>
+			<url>https://github.com/AlessandroPolastri94</url>
+			<timezone>Italy</timezone>
+		</developer>
+
+		<developer>
+			<id>uazadi</id>
+			<name>Umberto Azadi</name>
+			<email>u.azadi@campus.unimib.it</email>
+			<url>https://github.com/uazadi</url>
+			<organization>ESSeRE Lab - University of Milano Bicocca</organization>
+			<organizationUrl>http://essere.disco.unimib.it/wiki/start</organizationUrl>
+			<roles>
+				<role>Co-Advisor</role>
+				<role>Tutor</role>
+			</roles>
+			<timezone>Italy</timezone>
+			<properties>
+			</properties>
+		</developer>
+	</developers>
 </project>
