@@ -14,9 +14,9 @@ import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.VariableTree;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
 
-@Rule(key = "CustomRule2", name = "Custom Rule 2", description = "Your Custom Rule.", tags = { "codesmells" })
+@Rule(key = "CustomRule8", name = "Custom Rule 8", description = "Your Custom Rule.", tags = { "codesmells" })
 
-public class CustomRule2 extends IssuableSubscriptionVisitor {
+public class CustomRule8 extends IssuableSubscriptionVisitor {
 
 	private boolean type = false;
 	private String predicted;
@@ -25,7 +25,7 @@ public class CustomRule2 extends IssuableSubscriptionVisitor {
 
 	public List<Kind> nodesToVisit() {
 
-		System.out.println("[INFO] Reading Custom Rule 2 Prediction...");
+		System.out.println("[INFO] Reading Custom Rule 8 Prediction...");
 		try {
 
 			predicted = Utils.findAlgorithms();
@@ -105,7 +105,7 @@ public class CustomRule2 extends IssuableSubscriptionVisitor {
 							if (count == countDeleted) {
 
 								lines.remove(line);
-								reportIssue(method.simpleName(), "Custom Rule 2 detected: " + predicted);
+								reportIssue(method.simpleName(), "Custom Rule 8 detected: " + predicted);
 								break;
 							}
 						}
@@ -130,7 +130,7 @@ public class CustomRule2 extends IssuableSubscriptionVisitor {
 					if (csvClass.equalsIgnoreCase(symbol.enclosingClass().name().toString())) {
 
 						lines.remove(line);
-						reportIssue(_class.simpleName(), "Custom Rule 2 detected: " + predicted);
+						reportIssue(_class.simpleName(), "Custom Rule 8 detected: " + predicted);
 						break;
 					}
 				}

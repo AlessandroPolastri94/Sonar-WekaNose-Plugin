@@ -31,7 +31,8 @@ public class CustomRule1 extends IssuableSubscriptionVisitor {
 			predicted = Utils.findAlgorithms();
 			if (predicted == null) {
 
-				System.out.println("[ERROR] Deactivate this rule. You need it only if you had insert a custom algorithm.");
+				System.out.println(
+						"[ERROR] Deactivate this rule. You need it only if you had insert a custom algorithm.");
 				throw new InterruptedException();
 			}
 		} catch (IOException | InterruptedException e) {
@@ -104,7 +105,7 @@ public class CustomRule1 extends IssuableSubscriptionVisitor {
 							if (count == countDeleted) {
 
 								lines.remove(line);
-								reportIssue(method.simpleName(), "Custom Rule 1 detected!");
+								reportIssue(method.simpleName(), "Custom Rule 1 detected: " + predicted);
 								break;
 							}
 						}
