@@ -19,7 +19,8 @@ public class Utils {
 
 	private static File fileAnalyzed;
 	private static File algorithms;
-	
+	private static ArrayList<String> predictedAnalyzed = new ArrayList<>();
+
 	public static List<Kind> loadTree(boolean isMethod) {
 
 		List<Kind> merge = new ArrayList<>();
@@ -64,16 +65,19 @@ public class Utils {
 		String[] entries = algorithms.list();
 		for (String algorithm : entries) {
 
-			if (!algorithm.equalsIgnoreCase("DataClass_class.model")
-					&& !algorithm.equalsIgnoreCase("GodClass_class.model")
-					&& !algorithm.equalsIgnoreCase("FeatureEnvy_method.model")
-					&& !algorithm.equalsIgnoreCase("LongMethod_method.model")
-					&& !algorithm.equalsIgnoreCase("LongParameterList_method.model")
-					&& !algorithm.equalsIgnoreCase("SwitchStatement_method.model")) {
+				boolean flag = false;
+				for (String analyzed : predictedAnalyzed) {
 
-				return algorithm.substring(0, algorithm.length() - 6) + ".csv";
+					if (algorithm.equalsIgnoreCase(analyzed))
+
+						flag = true;
+				}
+				if (!flag) {
+
+					predictedAnalyzed.add(algorithm);
+					return algorithm.substring(0, algorithm.length() - 6) + ".csv";
+				}
 			}
-		}
 		return null;
 	}
 

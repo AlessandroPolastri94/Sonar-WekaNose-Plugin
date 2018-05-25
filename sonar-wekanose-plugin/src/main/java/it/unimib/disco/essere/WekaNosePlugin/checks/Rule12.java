@@ -14,26 +14,30 @@ import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.VariableTree;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
 
-@Rule(key = "CustomRule5", name = "Custom Rule 5", description = "Your Custom Rule.", tags = { "codesmells" })
+@Rule(key = "Rule12", name = "Rule 12", description = "Rule 12", tags = { "codesmells" })
 
-public class CustomRule5 extends IssuableSubscriptionVisitor {
+public class Rule12 extends IssuableSubscriptionVisitor {
 
 	private boolean type = false;
 	private String predicted;
 	private List<String> lines;
 	private boolean instantiate = true;
+	private String smellName;
 
 	public List<Kind> nodesToVisit() {
 
-		System.out.println("[INFO] Reading Custom Rule 5 Prediction...");
 		try {
 
 			predicted = Utils.findAlgorithms();
 			if (predicted == null) {
 
 				System.out.println(
-						"[ERROR] Deactivate this rule. You need it only if you had insert a custom algorithm.");
+						"[ERROR] This rule is not needed, deactivate it. Remember to activate as many rules as the inserted algorithms!");
 				throw new InterruptedException();
+			} else {
+				
+				smellName = predicted.substring(0, predicted.indexOf("_"));
+				System.out.println("[INFO] Reading " + smellName + " analysis...");
 			}
 		} catch (IOException | InterruptedException e) {
 
@@ -105,7 +109,7 @@ public class CustomRule5 extends IssuableSubscriptionVisitor {
 							if (count == countDeleted) {
 
 								lines.remove(line);
-								reportIssue(method.simpleName(), "Custom Rule 5 detected: " + predicted);
+								reportIssue(method.simpleName(), smellName);
 								break;
 							}
 						}
@@ -130,7 +134,7 @@ public class CustomRule5 extends IssuableSubscriptionVisitor {
 					if (csvClass.equalsIgnoreCase(symbol.enclosingClass().name().toString())) {
 
 						lines.remove(line);
-						reportIssue(_class.simpleName(), "Custom Rule 5 detected: " + predicted);
+						reportIssue(_class.simpleName(), smellName);
 						break;
 					}
 				}

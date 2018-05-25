@@ -48,19 +48,30 @@ public class PlugInSensor implements Sensor {
 		System.out.println("[INFO] Generating class and method datasets...");
 		new GenerateRows(workspace);
 		System.out.println("[INFO] Analysing datasets with basic algoritms...");
-		new CorrectDatasetGenerator(workspace, workspace.getDatasetPath() + "/ClassDataset.csv",
-				new String[] { workspace.getAlgorithms() + "/DataClass_class.model",
-						workspace.getAlgorithms() + "/GodClass_class.model" },
-				"_class");
-		new CorrectDatasetGenerator(workspace, workspace.getDatasetPath() + "/MethodDataset.csv",
-				new String[] { workspace.getAlgorithms() + "/FeatureEnvy_method.model",
-						workspace.getAlgorithms() + "/LongMethod_method.model" },
-				"_method_1");
-		new CorrectDatasetGenerator(workspace, workspace.getDatasetPath() + "/MethodDataset.csv",
-				new String[] { workspace.getAlgorithms() + "/LongParameterList_method.model",
-						workspace.getAlgorithms() + "/SwitchStatement_method.model" },
-				"_method_2");
-
+		if (new File(workspace.getAlgorithms() + "/DataClass_class.model").exists()) {
+			new CorrectDatasetGenerator(workspace, workspace.getDatasetPath() + "/ClassDataset.csv",
+					workspace.getAlgorithms() + "/DataClass_class.model", "_class");
+		}
+		if (new File(workspace.getAlgorithms() + "/GodClass_class.model").exists()) {
+			new CorrectDatasetGenerator(workspace, workspace.getDatasetPath() + "/ClassDataset.csv",
+					workspace.getAlgorithms() + "/GodClass_class.model", "_class");
+		}
+		if (new File(workspace.getAlgorithms() + "/FeatureEnvy_method.model").exists()) {
+			new CorrectDatasetGenerator(workspace, workspace.getDatasetPath() + "/MethodDataset.csv",
+					workspace.getAlgorithms() + "/FeatureEnvy_method.model", "_method_1");
+		}
+		if (new File(workspace.getAlgorithms() + "/LongMethod_method.model").exists()) {
+			new CorrectDatasetGenerator(workspace, workspace.getDatasetPath() + "/MethodDataset.csv",
+					workspace.getAlgorithms() + "/LongMethod_method.model", "_method_1");
+		}
+		if (new File(workspace.getAlgorithms() + "/LongParameterList_method.model").exists()) {
+			new CorrectDatasetGenerator(workspace, workspace.getDatasetPath() + "/MethodDataset.csv",
+					workspace.getAlgorithms() + "/LongParameterList_method.model", "_method_2");
+		}
+		if (new File(workspace.getAlgorithms() + "/SwitchStatement_method.model").exists()) {
+			new CorrectDatasetGenerator(workspace, workspace.getDatasetPath() + "/MethodDataset.csv",
+					workspace.getAlgorithms() + "/SwitchStatement_method.model", "_method_2");
+		}
 		System.out.println("[INFO] Analyzing dataset with yours algorithms...");
 		File index = new File(workspace.getAlgorithms());
 		String[] entries = index.list();

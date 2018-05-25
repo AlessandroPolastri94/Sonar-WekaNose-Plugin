@@ -22,7 +22,7 @@ public class CorrectDatasetGenerator {
 	private List<String> corrected;
 	private String correctedPath;
 
-	public CorrectDatasetGenerator(WorkSpaceHandler workspace, String path, String[] algorithmPath, String type)
+	public CorrectDatasetGenerator(WorkSpaceHandler workspace, String path, String algorithmPath, String type)
 			throws Exception {
 
 		datasetLines = new ArrayList<>();
