@@ -99,7 +99,7 @@ public class CorrectDatasetGenerator {
 				writer.write(line + "\n");
 			writer.close();
 		} else if (type.equals("_method_2")) {
-			
+
 			correctedPath = workspace.getCorrectDatasetPath() + "/CorrectMethod2Dataset.csv";
 			File file = new File(correctedPath);
 			FileWriter writer = new FileWriter(file, false);

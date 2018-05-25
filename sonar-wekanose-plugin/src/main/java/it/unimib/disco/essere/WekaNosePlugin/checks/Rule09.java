@@ -35,7 +35,7 @@ public class Rule09 extends IssuableSubscriptionVisitor {
 						"[ERROR] This rule is not needed, deactivate it. Remember to activate as many rules as the inserted algorithms!");
 				throw new InterruptedException();
 			} else {
-				
+
 				smellName = predicted.substring(0, predicted.indexOf("_"));
 				System.out.println("[INFO] Reading " + smellName + " analysis...");
 			}

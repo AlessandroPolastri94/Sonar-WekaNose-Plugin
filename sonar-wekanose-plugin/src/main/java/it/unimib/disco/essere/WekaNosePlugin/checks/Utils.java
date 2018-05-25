@@ -65,19 +65,19 @@ public class Utils {
 		String[] entries = algorithms.list();
 		for (String algorithm : entries) {
 
-				boolean flag = false;
-				for (String analyzed : predictedAnalyzed) {
+			boolean flag = false;
+			for (String analyzed : predictedAnalyzed) {
 
-					if (algorithm.equalsIgnoreCase(analyzed))
+				if (algorithm.equalsIgnoreCase(analyzed))
 
-						flag = true;
-				}
-				if (!flag) {
-
-					predictedAnalyzed.add(algorithm);
-					return algorithm.substring(0, algorithm.length() - 6) + ".csv";
-				}
+					flag = true;
 			}
+			if (!flag) {
+
+				predictedAnalyzed.add(algorithm);
+				return algorithm.substring(0, algorithm.length() - 6) + ".csv";
+			}
+		}
 		return null;
 	}
 
