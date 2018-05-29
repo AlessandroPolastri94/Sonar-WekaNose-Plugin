@@ -29,7 +29,7 @@ public class WorkSpaceHandler {
 			this.jCodeOdorPath = toolsPath + "/JCodeOdor.jar";
 			this.algorithmsPath = toolsPath + "/Algorithms";
 			this.analysisPath = createFolder(toolsPath + "/Analysis");
-			this.addExternalDependenciesPath = toolsPath + "/ADD_EXTERNAL_DEPENDENCIES.properties";
+			this.addExternalDependenciesPath = toolsPath + "/AddExternalDependencies.properties";
 			this.jCodeOdorAnalysisPath = createFolder(analysisPath + "/JCodeOdorAnalysis");
 			this.outlineAnalysisPath = createFolder(analysisPath + "/OutlineAnalysis");
 			this.datasetPath = createFolder(analysisPath + "/Dataset");
