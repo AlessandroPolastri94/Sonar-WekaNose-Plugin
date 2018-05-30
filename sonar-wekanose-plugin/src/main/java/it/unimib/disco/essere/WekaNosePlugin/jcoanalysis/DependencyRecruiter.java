@@ -19,7 +19,7 @@ public class DependencyRecruiter {
 
 	public DependencyRecruiter(WorkSpaceHandler workspace) throws JDOMException, IOException {
 
-		ottieniM2(workspace.getProjectAnalyzedPath());
+		findM2(workspace.getProjectAnalyzedPath());
 		File inputFile = new File(workspace.getProjectAnalyzedPath() + "/pom.xml");
 		SAXBuilder saxBuilder = new SAXBuilder();
 		org.jdom2.Document document = saxBuilder.build(inputFile);
@@ -60,7 +60,7 @@ public class DependencyRecruiter {
 		}
 	}
 
-	public void ottieniM2(String path) {
+	public void findM2(String path) {
 
 		int count = 0;
 		int i = 0;
