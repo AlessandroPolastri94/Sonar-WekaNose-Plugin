@@ -1,7 +1,7 @@
 # Sonar-WekaNose-Plugin
 
 SonarQube plugin for Code Smell detection through machine-learning techniques.
-This plugin was developed during my university internship provided by the ESSeRe Lab.
+This plugin was developed during my university internship provided by the ESSeRe Lab (University of Milano Bicocca).
 
 PRE-REQUISITES:
 
@@ -32,5 +32,5 @@ INSTALLATION:
 6) Set as default the just created profile, then activate as many rules as the number of the algorithms inserted.
 7) Run the project to analyze with SonarQube.
 
-
+For more details consult my batchelor thesis.
 For any problem related to the operation contact: alessandro.polastri94@gmail.com
