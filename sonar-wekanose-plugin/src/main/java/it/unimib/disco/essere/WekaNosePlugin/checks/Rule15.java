@@ -44,7 +44,7 @@ public class Rule15 extends IssuableSubscriptionVisitor {
 			e.printStackTrace();
 		}
 
-		if (predicted.contains("_method.model")) {
+		if (predicted.contains("_method.csv")) {
 
 			type = true;
 		}
