@@ -43,6 +43,7 @@ public class PlugInSensor implements Sensor {
 
 			Thread.sleep(100);
 		}
+		
 		System.out.println("[INFO] Selecting the correct metrics...");
 		new JCodeOdorDBHandler(SQLiteFilePath);
 		System.out.println("[INFO] Generating class and method datasets...");
