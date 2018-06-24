@@ -11,15 +11,17 @@ STRUCTURE OF THE ZIP FILE:
 
 Inside the zip to download are present:
 1) A folder called "sonar-wekanose-plugin-tools" that contains:
-    1.a) A folder called "Algorithms" that contains all the algorithms previously trained with WekaNose to analyze the projects.
-      It's possible to add personal algorithms (obviously calculated with WekaNose) to this folder.
-    1.b) A file called "AddExternalDependencies.properties" to be used if not all the dependencies of the project analyzed in the .pom file 
-    are specified. To insert a dependency in this file, just specify the entire path of the dependency. Examples of insertion and further 
-    information can be found within the same file.
-    1.c) The JCodeOdor JAR.
-    1.d) After the first SonarQube run will appear a new folder called Analysis that is used to contains all the files created during the 
-    analysis.
-2) The Sonar-WekaNose-Plugin JAR.
+
+2) A folder called "Algorithms" that contains all the algorithms previously trained with WekaNose to analyze the projects.
+It's possible to add personal algorithms (obviously calculated with WekaNose) to this folder.
+3) A file called "AddExternalDependencies.properties" to be used if not all the dependencies of the project analyzed in the .pom file 
+are specified. To insert a dependency in this file, just specify the entire path of the dependency. Examples of insertion and further 
+information can be found within the same file.
+4) The JCodeOdor JAR.
+5) After the first SonarQube run will appear a new folder called Analysis that is used to contains all the files created during the 
+analysis.
+
+6) The Sonar-WekaNose-Plugin JAR.
 
 NB: All these files and folders are necessary for the correct operation of the plugin.
 
