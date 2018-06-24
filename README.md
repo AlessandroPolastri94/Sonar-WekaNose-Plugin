@@ -11,13 +11,13 @@ STRUCTURE OF THE ZIP FILE:
 
 Inside the zip to download are present:
 1) A folder called "sonar-wekanose-plugin-tools" that contains:
-    a) A folder called "Algorithms" that contains all the algorithms previously trained with WekaNose to analyze the projects.
+    1.a) A folder called "Algorithms" that contains all the algorithms previously trained with WekaNose to analyze the projects.
       It's possible to add personal algorithms (obviously calculated with WekaNose) to this folder.
-    b) A file called "AddExternalDependencies.properties" to be used if not all the dependencies of the project analyzed in the .pom file 
+    1.b) A file called "AddExternalDependencies.properties" to be used if not all the dependencies of the project analyzed in the .pom file 
     are specified. To insert a dependency in this file, just specify the entire path of the dependency. Examples of insertion and further 
     information can be found within the same file.
-    c) The JCodeOdor JAR.
-    d) After the first SonarQube run will appear a new folder called Analysis that is used to contains all the files created during the 
+    1.c) The JCodeOdor JAR.
+    1.d) After the first SonarQube run will appear a new folder called Analysis that is used to contains all the files created during the 
     analysis.
 2) The Sonar-WekaNose-Plugin JAR.
 
@@ -25,7 +25,7 @@ NB: All these files and folders are necessary for the correct operation of the p
 
 INSTALLATION:
 
-1) Download the zip file "Sonar-WekaNose-Plugin.zip".
+1) Download the zip file "Sonar-WekaNose-Plugin.zip" -> (https://drive.google.com/open?id=1fs4EE4dVE8him18i-mcGkyuXMRsRgjoG).
 2) Unpack this file in the "...\SonarQube\extensions\plugins" folder.
 3) Start SonarQube, and open it at localhost:9000.
 4) Log in as Administrator.
