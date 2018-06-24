@@ -9,7 +9,7 @@ This plugin can be used only with WINDOWS Operating Systems.
 
 STRUCTURE OF THE ZIP FILE:
 
-Inside the zip to download are present the Sonar-WekaNose-Plugin Jar, and a folder called "sonar-wekanose-plugin-tools" that contains:
+Inside the zip to download are present the Sonar-WekaNose-Plugin JAR, and a folder called "sonar-wekanose-plugin-tools" that contains:
 
 1) A folder called "Algorithms" that contains all the algorithms previously trained with WekaNose to analyze the projects.
 It's possible to add personal algorithms (obviously calculated with WekaNose) to this folder.
