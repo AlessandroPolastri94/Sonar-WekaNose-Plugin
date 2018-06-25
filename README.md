@@ -38,9 +38,10 @@ POSSIBLE ERRORS:
 
 If no all additional dependencies are placed in the AddExternalDependencies.properties file, the program remains locked while doing nothing. This is notified during the analysis, if this happens, but it is also possible that the warning message appears during the analysis of a project with many dependencies (in which case it is sufficient to let the execution continue). The message is as follows:
 
--"Be aware that if even one dependency was not specified the computation will ramain stuck, therefore, please check again the dependencies (this is an automated prited message, if you are analysing a large project, it may not be addess to you)"
+"Be aware that if even one dependency was not specified the computation will ramain stuck, therefore, please check again the dependencies (this is an automated prited message, if you are analysing a large project, it may not be addess to you)"
 
 I ask to be very careful to insert all the additional dependencies in the file mentioned above.
 
 For more details consult my batchelor thesis.
+
 For any problem related to the operation contact: alessandro.polastri94@gmail.com
