@@ -84,7 +84,6 @@ public class PlugInSensor implements Sensor {
 			new CorrectDatasetGenerator(workspace, workspace.getDatasetPath() + "/MethodDataset.csv",
 					workspace.getAlgorithms() + "/SwitchStatement_method.model", "_method_2");
 		}
-		
 		System.out.println("[INFO] Analyzing dataset with yours algorithms...");
 		File index = new File(workspace.getAlgorithms());
 		String[] entries = index.list();
