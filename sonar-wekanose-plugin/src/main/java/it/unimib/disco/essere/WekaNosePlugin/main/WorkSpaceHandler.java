@@ -26,14 +26,28 @@ public class WorkSpaceHandler {
 			System.out.println("[INFO] Generating the workspace...");
 			this.projectAnalyzedPath = path;
 			this.toolsPath = findPath("sonar-wekanose-plugin-tools");
-			this.jCodeOdorPath = toolsPath + "/JCodeOdor.jar";
-			this.algorithmsPath = toolsPath + "/Algorithms";
-			this.analysisPath = createFolder(toolsPath + "/Analysis");
-			this.addExternalDependenciesPath = toolsPath + "/AddExternalDependencies.properties";
-			this.jCodeOdorAnalysisPath = createFolder(analysisPath + "/JCodeOdorAnalysis");
-			this.outlineAnalysisPath = createFolder(analysisPath + "/OutlineAnalysis");
-			this.datasetPath = createFolder(analysisPath + "/Dataset");
-			this.correctDatasetPath = createFolder(datasetPath + "/CorrectDataset");
+			if (new File(toolsPath + "/JCodeOdor.jar").exists()
+					&& new File(toolsPath + "/Algorithms").exists()
+					&& new File(toolsPath + "/AddExternalDependencies.properties").exists()) {
+
+				this.jCodeOdorPath = toolsPath + "/JCodeOdor.jar";
+				this.algorithmsPath = toolsPath + "/Algorithms";
+				this.analysisPath = createFolder(toolsPath + "/Analysis");
+				this.addExternalDependenciesPath = toolsPath + "/AddExternalDependencies.properties";
+				this.jCodeOdorAnalysisPath = createFolder(analysisPath + "/JCodeOdorAnalysis");
+				this.outlineAnalysisPath = createFolder(analysisPath + "/OutlineAnalysis");
+				this.datasetPath = createFolder(analysisPath + "/Dataset");
+				this.correctDatasetPath = createFolder(datasetPath + "/CorrectDataset");
+			} else {
+
+				System.out.println(
+						"[ERROR] The sonar-wekanose-plugin-tools folder seems to be corrupt. Check that there is no other folder with the same name,"
+								+ '\n'
+								+ "[ERROR] and that all the files for correct operation are present inside it. For more information see the"
+								+ '\n'
+								+ "[ERROR] installation documentation at this address: https://github.com/AlessandroPolastri94/Sonar-WekaNose-Plugin");
+				throw new InterruptedException();
+			}
 		} else {
 
 			findFilePath = findPath(path);

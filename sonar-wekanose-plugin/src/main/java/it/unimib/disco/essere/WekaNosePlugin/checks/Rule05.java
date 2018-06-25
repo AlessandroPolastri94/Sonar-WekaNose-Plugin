@@ -31,17 +31,16 @@ public class Rule05 extends IssuableSubscriptionVisitor {
 			predicted = Utils.findAlgorithms();
 			if (predicted == null) {
 
-				System.out.println(
+				throw new Exception(
 						"[ERROR] This rule is not needed, deactivate it. Remember to activate as many rules as the inserted algorithms!");
-				throw new InterruptedException();
 			} else {
 
 				smellName = predicted.substring(0, predicted.indexOf("_"));
 				System.out.println("[INFO] Reading " + smellName + " analysis...");
 			}
-		} catch (IOException | InterruptedException e) {
+		} catch (Exception e) {
 
-			e.printStackTrace();
+			System.out.println(e.getMessage());
 		}
 
 		if (predicted.contains("_method.csv")) {

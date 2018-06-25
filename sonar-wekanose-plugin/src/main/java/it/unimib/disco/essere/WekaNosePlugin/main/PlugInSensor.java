@@ -18,6 +18,8 @@ public class PlugInSensor implements Sensor {
 
 	private FileSystem fs;
 	private WorkSpaceHandler workspace;
+	private int timeCycle = 0;
+	private boolean checkTime = true;
 
 	@Override
 	public void describe(SensorDescriptor descriptor) {
@@ -41,6 +43,16 @@ public class PlugInSensor implements Sensor {
 		new JCodeOdorExecutor(workspace.getJCodeOdorPath(), Arrays.asList(arg.split(" ")));
 		while (!new File(SQLiteFilePath).exists()) {
 
+			if (timeCycle >= 600 && checkTime) {
+
+				checkTime = false;
+				System.out.println(
+						"[WARNING] Be aware that if even one dependency was not specified the computation will ramain stuck, therefore, please check again the dependencies"
+								+ '\n'
+								+ "[WARNING] (this is an automated prited message, if you are analysing a large project, it may not be addess to you)");
+			}
+
+			timeCycle++;
 			Thread.sleep(100);
 		}
 		System.out.println("[INFO] Selecting the correct metrics...");
