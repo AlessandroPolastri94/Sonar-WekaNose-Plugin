@@ -2,14 +2,12 @@ package it.unimib.disco.essere.WekaNosePlugin.main;
 
 import org.sonar.api.batch.sensor.Sensor;
 import org.sonar.api.batch.sensor.SensorDescriptor;
-
 import it.unimib.disco.essere.WekaNosePlugin.datasetgenerator.GenerateRows;
 import it.unimib.disco.essere.WekaNosePlugin.jcoanalysis.DependencyRecruiter;
 import it.unimib.disco.essere.WekaNosePlugin.jcoanalysis.JCodeOdorDBHandler;
 import it.unimib.disco.essere.WekaNosePlugin.jcoanalysis.JCodeOdorExecutor;
 import it.unimib.disco.essere.WekaNosePlugin.outlineanalysis.CorrectDatasetGenerator;
 import it.unimib.disco.essere.WekaNosePlugin.outlineanalysis.OutlineExecutor;
-
 import java.io.File;
 import java.util.Arrays;
 import org.sonar.api.batch.fs.FileSystem;
