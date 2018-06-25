@@ -6,6 +6,7 @@ This plugin was developed during my university internship provided by the ESSeRE
 PRE-REQUISITES:
 
 This plugin can be used only with WINDOWS Operating Systems.
+
 NB: Check that the SonarQube folder is NOT inserted in paths where administrative permission is required to access or edit 
 (for example, in the Windows Programs folder).
 
