@@ -27,7 +27,7 @@ NB: All these files and folders are necessary for the correct operation of the p
 
 INSTALLATION:
 
-1) Download the zip file "Sonar-WekaNose-Plugin.zip" -> (https://drive.google.com/open?id=1NakwXg8dDIi_1DwFOZ-0-jDQf56OHEja).
+1) Download the zip file "Sonar-WekaNose-Plugin.zip" -> (https://drive.google.com/open?id=1Js10ufAQ_uVZLlBFPqtDt4AoxyAaL_am).
 2) Unpack this file in the "...\SonarQube\extensions\plugins" folder.
 3) Start SonarQube, and open it at localhost:9000.
 4) Log in as Administrator.
