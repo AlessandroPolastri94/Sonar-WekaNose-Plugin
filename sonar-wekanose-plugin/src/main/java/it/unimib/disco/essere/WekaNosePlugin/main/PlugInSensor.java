@@ -45,9 +45,12 @@ public class PlugInSensor implements Sensor {
 
 				checkTime = false;
 				System.out.println(
-						"[WARNING] Be aware that if even one dependency was not specified the computation will ramain stuck, therefore, please check again the dependencies"
-								+ '\n'
-								+ "[WARNING] (this is an automated prited message, if you are analysing a large project, it may not be addess to you)");
+						"[SEVERE]----------------------------------------------------------------------------------------------------------------------------------------------\r\n"
+								+ "Be aware that if even one dependency was not specified the computation will remain stuck. \r\n"
+								+ "Therefore, please check again that all dependencies, that are not included in the pom.xml, have been specified \r\n"
+								+ "in the file \"sonarqube-X.X\\extensions\\plugins\\sonar-wekanose-plugin-tools\\AddExternalDependencies.properties\" \r\n"
+								+ "(this is an automated printed message, if you are analysing a large project, it may not be addressed to you)\r\n"
+								+ "------------------------------------------------------------------------------------------------------------------------------------------------------");
 			}
 
 			timeCycle++;
