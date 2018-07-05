@@ -27,7 +27,7 @@ NB: All these files and folders are necessary for the correct operation of the p
 
 INSTALLATION:
 
-1) [Dowload](https://drive.google.com/open?id=1Js10ufAQ_uVZLlBFPqtDt4AoxyAaL_am) the zip file "Sonar-WekaNose-Plugin.zip" -> (https://drive.google.com/open?id=1Js10ufAQ_uVZLlBFPqtDt4AoxyAaL_am).
+1) [Dowload](https://drive.google.com/open?id=1Js10ufAQ_uVZLlBFPqtDt4AoxyAaL_am) the zip file "Sonar-WekaNose-Plugin.zip".
 2) Unpack this file in the "...\SonarQube\extensions\plugins" folder.
 3) Start SonarQube, and open it at localhost:9000.
 4) Log in as Administrator.
@@ -43,6 +43,6 @@ If no all additional dependencies are placed in the AddExternalDependencies.prop
 
 I ask to be very careful to insert all the additional dependencies in the file mentioned above.
 
-For more details consult my batchelor thesis.
+For more details consult my [Bachelor Thesis](https://drive.google.com/open?id=160Tga1R02J-KgtDvXqRZASViouMKK4u6).
 
 For any problem related to the operation contact: alessandro.polastri94@gmail.com
